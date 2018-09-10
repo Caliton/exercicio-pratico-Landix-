@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+/* Estrutura */
+.input-container {
+  position: relative;
+  margin: 4rem;
+}
+
+.modal-input {
+  border: 0;
+  border-bottom: 2px solid #9e9e9e;
+  outline: none;
+  transition: .2s ease-in-out;
+  box-sizing: border-box;
+  background-color: rgba(250, 235, 215, 0.05);
+}
+
+.label {
+  top: 0;
+  left: 0; right: 0;
+  color: #616161;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  cursor: text;
+  transition: .2s ease-in-out;
+  box-sizing: border-box;
+}
+
+.modal-input,
+.label {
+  width: 100%;
+  height: 3rem;
+  font-size: 1.5rem;
+}
+
+/* Interação */
+.modal-input:valid,
+.modal-input:focus {
+  border-bottom: 2px solid #3C3E91;
+}
+
+.modal-input:valid + .label,
+.modal-input:focus + .label {
+  color: #3C3E91;
+  font-size: 1.3rem;
+  top: -30px;
+  pointer-events: none;
+}
+
+.btn-modal {
+    border-radius: 3px;
+    padding: 1vh 0.8vh;
+    border: none;
+    width: 30%;
+    font-size: 2rem;
+    margin: auto;
+    text-align: center;
+    display: block;
+    pointer-events:visible;
+    cursor: pointer;
+}
+
+.selecao-pizza {
+    border: 0;
+    border-bottom: #9e9e9e;
+    outline: none;
+    transition: .2s ease-in-out;
+    box-sizing: border-box;
+    padding: 0.7rem 2.2rem;
+}
+
+@media (max-width: 700px) {
+
+    .input-container {
+        margin: 4rem .5rem;
+        transition: .5s
+    }
+
+}
